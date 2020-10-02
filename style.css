@@ -1,0 +1,116 @@
+*,
+*::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.grid {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 500px;
+	position: relative;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	transition: all 0.5s;
+}
+
+.pixel {
+	width: 50px;
+	height: 50px;
+	border: solid 1px black;
+	cursor: pointer;
+	margin: 1px;
+	transition: all 0.5s;
+}
+
+.clear,
+.clearAll,
+.draw,
+.randomColor {
+	padding: 1em;
+	margin: 3em 0;
+	background-color: black;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.clear:hover,
+.clearAll:hover,
+.draw:hover,
+.randomColor:hover {
+	transform: scale(1.1);
+}
+
+.select__color {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+	align-items: center;
+}
+
+.select__color span {
+	margin-right: 1em;
+}
+
+#colorPicker {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+}
+
+#colorPicker::-webkit-color-swatch {
+	border: none;
+	border-radius: 50%;
+}
+
+.theme__color {
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.theme__color span {
+	margin-bottom: 2em;
+	display: inline-block;
+}
+
+.theme__color div {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	border: solid 5px white;
+	background-color: black;
+	cursor: pointer;
+}
+
+.theme + .theme {
+	margin-top: 1em;
+}
+
+#theme1 {
+	background-color: #ffa69e;
+}
+
+#theme2 {
+	background-color: #93e1d8;
+}
+
+#theme3 {
+	background-color: #323234;
+}
